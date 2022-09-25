@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mind_breaker.hpp                                   :+:      :+:    :+:   */
+/*   Guess.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaapatou <aaapatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/24 04:52:26 by aaapatou          #+#    #+#             */
-/*   Updated: 2022/09/25 17:58:57 by aaapatou         ###   ########.fr       */
+/*   Created: 2022/09/25 18:05:19 by aaapatou          #+#    #+#             */
+/*   Updated: 2022/09/25 20:25:43 by aaapatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MIND_BREAKER_HPP
-# define MIND_BREAKER_HPP
+# include "mind_breaker.hpp"
 
-# include <iostream>
+Guess::Guess(int *answer, int *first_answer, int positions, int state)
+{
+	int		*tab;
 
-class Guesser;
-class Guess;
-
-#endif
+	tab = new int[positions];
+	this->answer = tab;
+	this->answer = answer;
+	this->state = state;
+}
