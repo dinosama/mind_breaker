@@ -48,4 +48,4 @@ From the set of guesses with the minimum (max) score, select one as the next gue
 Knuth follows the convention of choosing the guess with the least numeric value e.g. 2345 is lower than 3456. Knuth also gives an example showing that in some cases no member of S will be among the highest scoring guesses and thus the guess cannot win on the next turn, yet will be necessary to assure a win in five.
 
 
-**7.** Repeat from step 3
+**7.** Repeat from step 3.
