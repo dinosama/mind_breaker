@@ -6,7 +6,7 @@
 /*   By: aaapatou <aaapatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 09:42:55 by aaapatou          #+#    #+#             */
-/*   Updated: 2022/09/30 12:51:41 by aaapatou         ###   ########.fr       */
+/*   Updated: 2022/09/30 16:34:13 by aaapatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int		Pegs::getPegsLevel()
 	int		level;
 
 	level = 0;
-	level = this->black * 2;
+	level = this->black * this->positions;
 	level = level + this->white;
 	return (level);
 }
@@ -100,10 +100,11 @@ Pegs	&Pegs::operator=(Pegs &rhs)
 	this->white = rhs.getWhite();
 }
 
-void	Pegs::setPegs(int black, int white)
+void	Pegs::setPegs(int black, int white, int positions)
 {
 	this->black = black;
 	this->white = white;
+	this->positions = positions;
 }
 
 std::ostream    &operator<<(std::ostream & out, Pegs &pegs)
