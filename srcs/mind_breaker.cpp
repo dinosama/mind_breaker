@@ -6,7 +6,7 @@
 /*   By: aaapatou <aaapatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 17:23:44 by aaapatou          #+#    #+#             */
-/*   Updated: 2022/09/30 09:11:23 by aaapatou         ###   ########.fr       */
+/*   Updated: 2022/09/30 13:23:03 by aaapatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 int     main(int ac, char **av)
 {
-    Guesser     guesser(5, 4, 6);
-    int         i;
+    long long     *tab;
 
-    i = 0;
-    guesser.showGuesses();
+    tab = parser(ac, av);
+    if (!tab)
+        return (1);
+    Guesser     guesser(tab[2], tab[1], tab[0]);
+    delete[] tab;
     return (0);
 }

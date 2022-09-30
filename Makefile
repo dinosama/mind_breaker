@@ -1,6 +1,8 @@
 NAME = mind_breaker
 
-SRCS = srcs/error_manager.cpp srcs/Guess.cpp srcs/Guesser.cpp srcs/mind_breaker.cpp srcs/parser.cpp srcs/utils.cpp
+SRCS = srcs/error_manager.cpp srcs/Guess.cpp \
+		srcs/Guesser.cpp srcs/mind_breaker.cpp \
+		srcs/parser.cpp srcs/utils.cpp srcs/Pegs.cpp
 
 OBJS = $(subst .cpp,.o,$(SRCS))
 

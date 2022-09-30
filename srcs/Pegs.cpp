@@ -6,11 +6,11 @@
 /*   By: aaapatou <aaapatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 09:42:55 by aaapatou          #+#    #+#             */
-/*   Updated: 2022/09/30 10:22:29 by aaapatou         ###   ########.fr       */
+/*   Updated: 2022/09/30 12:51:41 by aaapatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "mind_breaker.hpp"
+# include "../includes/mind_breaker.hpp"
 
 Pegs::Pegs()
 {
@@ -98,4 +98,16 @@ Pegs	&Pegs::operator=(Pegs &rhs)
 {
 	this->black = rhs.getBlack();
 	this->white = rhs.getWhite();
+}
+
+void	Pegs::setPegs(int black, int white)
+{
+	this->black = black;
+	this->white = white;
+}
+
+std::ostream    &operator<<(std::ostream & out, Pegs &pegs)
+{
+	out << "black : " << pegs.getBlack() << " white : " << pegs.getWhite();
+	return (out);
 }

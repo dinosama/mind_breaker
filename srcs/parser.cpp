@@ -6,7 +6,7 @@
 /*   By: aaapatou <aaapatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 17:29:01 by aaapatou          #+#    #+#             */
-/*   Updated: 2022/09/30 07:10:07 by aaapatou         ###   ########.fr       */
+/*   Updated: 2022/09/30 13:15:22 by aaapatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,18 +68,15 @@ int	ft_check_argument(int ac, char **av)
 	return (argnum);
 }
 
-bool	parser(int ac, char **av, Guesser *guesser)
+long long	*parser(int ac, char **av)
 {
 	int				argnum;
 	long long 		*tab;
 
 	argnum = ft_check_argument(ac, av);
 	if (argnum != 3)
-		return (1);
+		return (NULL);
 	tab = new long long[argnum];
 	ft_read_argument(ac, av, tab);
-	guesser->setColors((int)tab[0]);
-	guesser->setPositions((int)tab[1]);
-	guesser->setTry((int)tab[2]);
-	return (0);
+	return (tab);
 }
