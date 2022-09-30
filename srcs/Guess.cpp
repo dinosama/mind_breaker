@@ -6,7 +6,7 @@
 /*   By: aaapatou <aaapatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 18:05:19 by aaapatou          #+#    #+#             */
-/*   Updated: 2022/09/30 21:01:36 by aaapatou         ###   ########.fr       */
+/*   Updated: 2022/09/30 21:56:57 by aaapatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ std::ostream    &operator<<(std::ostream & out, Guess & guess)
 	answer = guess.getAnswer();
 	while (i < positions)
 	{
-		out << answer[i];
+		out << (char)(answer[i] + 96);
 		i++;
 	}
 	return (out);
