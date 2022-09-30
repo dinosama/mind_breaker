@@ -2,7 +2,7 @@
 
 ![Mastermind](https://www.conseilsmarketing.com/wp-content/uploads/2015/10/497348.jpg)
 
-- [x] Mastermind solver project made in c++ in the context of a coding challenge.
+- [x] Mastermind solver project made in c++ in the context of a 42 school coding challenge.
 
 ## Execution :
 ```
