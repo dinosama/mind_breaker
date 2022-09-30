@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mind_breaker.c                                     :+:      :+:    :+:   */
+/*   mind_breaker.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaapatou <aaapatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 17:23:44 by aaapatou          #+#    #+#             */
-/*   Updated: 2022/09/25 18:00:41 by aaapatou         ###   ########.fr       */
+/*   Updated: 2022/09/30 09:11:23 by aaapatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/mind_breaker.hpp"
+#include "../includes/mind_breaker.hpp"
 
 int     main(int ac, char **av)
 {
-    if (ac != 4)
-        return (0);
+    Guesser     guesser(5, 4, 6);
+    int         i;
+
+    i = 0;
+    guesser.showGuesses();
     return (0);
 }

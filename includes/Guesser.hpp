@@ -6,7 +6,7 @@
 /*   By: aaapatou <aaapatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 17:55:32 by aaapatou          #+#    #+#             */
-/*   Updated: 2022/09/25 17:58:07 by aaapatou         ###   ########.fr       */
+/*   Updated: 2022/09/30 08:57:24 by aaapatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 
 # include "mind_breaker.hpp"
 
-class   Guesser()
+class Guess;
+
+class   Guesser
 {
     private:
         Guess			*guesses;
@@ -27,6 +29,13 @@ class   Guesser()
         int				positions;
 		int				colors;
     public:
-}
+        Guesser(int max_try, int positions, int colors);
+        ~Guesser();
+        void    setColors(int colors);
+        void    setTry(int max_try);
+        void    setPositions(int positions);
+        Guess   *getGuesses(void);
+        void	showGuesses(void);
+};
 
 #endif

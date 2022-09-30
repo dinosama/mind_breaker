@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parser.c                                           :+:      :+:    :+:   */
+/*   parser.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaapatou <aaapatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 17:29:01 by aaapatou          #+#    #+#             */
-/*   Updated: 2022/09/25 18:00:55 by aaapatou         ###   ########.fr       */
+/*   Updated: 2022/09/30 07:10:07 by aaapatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/mind_breaker.hpp"
+#include "../includes/mind_breaker.hpp"
 
 void	ft_read_argument(int ac, char **av, long long *tab)
 {
@@ -68,7 +68,7 @@ int	ft_check_argument(int ac, char **av)
 	return (argnum);
 }
 
-bool	parser(int ac, char **av, Guesser guesser)
+bool	parser(int ac, char **av, Guesser *guesser)
 {
 	int				argnum;
 	long long 		*tab;
@@ -78,8 +78,8 @@ bool	parser(int ac, char **av, Guesser guesser)
 		return (1);
 	tab = new long long[argnum];
 	ft_read_argument(ac, av, tab);
-	guesser.setColors((int)tab[0]);
-	guesser.setPositions((int)tab[1]);
-	guesser.setTry((int)tab[2]);
+	guesser->setColors((int)tab[0]);
+	guesser->setPositions((int)tab[1]);
+	guesser->setTry((int)tab[2]);
 	return (0);
 }
