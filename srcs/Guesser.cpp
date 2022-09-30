@@ -6,7 +6,7 @@
 /*   By: aaapatou <aaapatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 18:05:49 by aaapatou          #+#    #+#             */
-/*   Updated: 2022/09/30 21:02:06 by aaapatou         ###   ########.fr       */
+/*   Updated: 2022/09/30 22:08:57 by aaapatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,17 +128,9 @@ void	Guesser::sortguesses(void)
 	{
 		this->guesses[i].generatePegs(this->actual_guess);
 		if (this->guesses[i].getPegs() != this->actual_pegs && this->guesses[i].getState() != 0)
-		{
-			std::cout << this->guesses[i] << " " << this->guesses[i].getPegs() << " =/= " << *this->actual_guess << " " << this->actual_pegs << std::endl;
 			this->guesses[i].setState(1);
-		}
 		i++;
 	}
-}
-
-void	Guesser::sort_next_guess(void)
-{
-
 }
 
 void	Guesser::find_next_guess(void)
@@ -199,19 +191,21 @@ bool	Guesser::guess(void)
 	this->find_first_guess();
 	while (this->tries < this->max_try)
 	{
-		std::cout << "Attempt " << this->tries + 1 << std::endl;
+		std::cout << "\033[1;32mAttempt " << this->tries + 1 << "\033[0m" << std::endl;
 		std::cout << *this->actual_guess << std::endl;
 		std::cout << "How many correct letters are in the correct position?" << std::endl;
 		std::cin >> black;
 		if (black == this->positions)
+		{
+			std::cout << "It's win!" << std::endl;
 			return (1);
+		}
 		std::cout << "How many correct letters are in the incorrect position?" << std::endl;
 		std::cin >> white;
 		this->actual_guess->setState(0);
 		this->actual_pegs.setPegs(black, white, this->positions);
 		this->sortguesses();
 		this->find_next_guess();
-		this->showGuesses();
 		this->tries++;
 	}
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: aaapatou <aaapatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 17:55:32 by aaapatou          #+#    #+#             */
-/*   Updated: 2022/09/30 21:05:36 by aaapatou         ###   ########.fr       */
+/*   Updated: 2022/09/30 21:42:33 by aaapatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ class   Guesser			// Core class of mind_breaker contain all possibles guesses an
 		bool	guess(void);
 		void	sortguesses(void);
 		void	find_next_guess(void);
-		void	sort_next_guess(void);
 };
 
 #endif
