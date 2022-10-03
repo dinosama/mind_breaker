@@ -6,7 +6,7 @@
 /*   By: aaapatou <aaapatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 09:42:55 by aaapatou          #+#    #+#             */
-/*   Updated: 2022/09/30 16:34:13 by aaapatou         ###   ########.fr       */
+/*   Updated: 2022/10/03 22:53:42 by aaapatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,7 @@ Pegs	&Pegs::operator=(Pegs &rhs)
 {
 	this->black = rhs.getBlack();
 	this->white = rhs.getWhite();
+	return (*this);
 }
 
 void	Pegs::setPegs(int black, int white, int positions)
