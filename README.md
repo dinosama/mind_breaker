@@ -49,3 +49,5 @@ Knuth follows the convention of choosing the guess with the least numeric value 
 
 
 **7.** Repeat from step 3.
+
+[Source: Wikipedia](https://en.wikipedia.org/wiki/Mastermind_(board_game) "Mastermind's Wikipedia page")
